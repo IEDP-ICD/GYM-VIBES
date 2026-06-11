@@ -10,10 +10,16 @@
       "foto": "wtf.jpg"
     },
     {
-      "nombre": "Nombre Apellido",
+      "nombre": "julian leal ",
       "rol": "Nutrición y alimentación",
       "descripcion": "Responsable de las infografías de nutrición deportiva: macronutrientes, recetas saludables, suplementación y planes alimenticios para diferentes objetivos.",
       "foto": "integrante2.jpg"
+    },
+    {
+      "nombre": "Nombre Apellido",
+      "rol": "Contenido y motivación",
+      "descripcion": "Gestiona los videos, las infografías de tips y motivación, y las redes sociales del proyecto. También edita el contenido audiovisual del canal.",
+      "foto": "integrante3.jpg"
     },
     {
       "nombre": "Nombre Apellido",
