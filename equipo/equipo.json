@@ -1,0 +1,25 @@
+{
+  "mision": "Promover un estilo de vida activo, saludable y motivado entre los jóvenes de Cúcuta, compartiendo contenido digital de calidad sobre entrenamiento, nutrición y bienestar a través de infografías, videos y recursos visuales que inspiren a más personas a adoptar la vida fitness como un hábito diario.",
+  "vision": "Convertirnos en la referencia digital de vida fitness para estudiantes y jóvenes de nuestra comunidad, construyendo una comunidad activa que comparte logros, aprende de manera entretenida y se motiva mutuamente para alcanzar sus metas de salud y bienestar.",
+  "sobre_nosotros": "Somos tres estudiantes de la IEDP que creemos que vivir fit es para todos. GYM VIBES nació de nuestra pasión por el deporte, la alimentación saludable y las ganas de compartir ese estilo de vida con nuestra comunidad de forma visual y motivadora.",
+  "integrantes": [
+    {
+      "nombre": "Nombre Apellido",
+      "rol": "Entrenamiento y rutinas",
+      "descripcion": "Encargado de diseñar las infografías de rutinas en Canva y crear contenido sobre técnicas de entrenamiento, series, repeticiones y programas de ejercicio.",
+      "foto": "integrante1.jpg"
+    },
+    {
+      "nombre": "Nombre Apellido",
+      "rol": "Nutrición y alimentación",
+      "descripcion": "Responsable de las infografías de nutrición deportiva: macronutrientes, recetas saludables, suplementación y planes alimenticios para diferentes objetivos.",
+      "foto": "integrante2.jpg"
+    },
+    {
+      "nombre": "Nombre Apellido",
+      "rol": "Contenido y motivación",
+      "descripcion": "Gestiona los videos, las infografías de tips y motivación, y las redes sociales del proyecto. También edita el contenido audiovisual del canal.",
+      "foto": "integrante3.jpg"
+    }
+  ]
+}
