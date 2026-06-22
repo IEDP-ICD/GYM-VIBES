@@ -4,22 +4,16 @@
   "sobre_nosotros": "Somos tres estudiantes de la IEDP que creemos que vivir fit es para todos. GYM VIBES nació de nuestra pasión por el deporte, la alimentación saludable y las ganas de compartir ese estilo de vida con nuestra comunidad de forma visual y motivadora.",
   "integrantes": [
     {
-      "nombre": "Joulder Boada",
-      "rol": "Cocina",
+      "nombre": "Nombre Apellido",
+      "rol": "Entrenamiento y rutinas",
       "descripcion": "Encargado de diseñar las infografías de rutinas en Canva y crear contenido sobre técnicas de entrenamiento, series, repeticiones y programas de ejercicio.",
-      "foto": "wtf.jpg"
-    },
-    {
-      "nombre": "julian leal ",
-      "rol": "Nutrición y alimentación",
-      "descripcion": "Responsable de las infografías de nutrición deportiva: macronutrientes, recetas saludables, suplementación y planes alimenticios para diferentes objetivos.",
-      "foto": "integrante2.jpg"
+      "foto": "integrante1.jpg"
     },
     {
       "nombre": "Nombre Apellido",
-      "rol": "Contenido y motivación",
-      "descripcion": "Gestiona los videos, las infografías de tips y motivación, y las redes sociales del proyecto. También edita el contenido audiovisual del canal.",
-      "foto": "integrante3.jpg"
+      "rol": "Nutrición y alimentación",
+      "descripcion": "Responsable de las infografías de nutrición deportiva: macronutrientes, recetas saludables, suplementación y planes alimenticios para diferentes objetivos.",
+      "foto": "integrante2.jpg"
     },
     {
       "nombre": "Nombre Apellido",
