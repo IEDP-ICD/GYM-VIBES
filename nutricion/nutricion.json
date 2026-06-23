@@ -1,0 +1,27 @@
+[
+  {
+    "titulo": "Alimentos para ganar músculo",
+    "subtitulo": "Proteínas y macros",
+    "archivo": "alimentos-musculo.jpg"
+  },
+  {
+    "titulo": "Qué comer antes del entrenamiento",
+    "subtitulo": "Pre-workout · Energía",
+    "archivo": "pre-workout-comida.jpg"
+  },
+  {
+    "titulo": "Recuperación post-entreno",
+    "subtitulo": "Post-workout · Recuperación",
+    "archivo": "post-workout-comida.jpg"
+  },
+  {
+    "titulo": "Snacks saludables para el gym",
+    "subtitulo": "Meriendas · Sin culpa",
+    "archivo": "snacks-saludables.jpg"
+  },
+  {
+    "titulo": "Hidratación en el deporte",
+    "subtitulo": "Agua e hidratación",
+    "archivo": "hidratacion-deporte.jpg"
+  }
+]
