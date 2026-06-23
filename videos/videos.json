@@ -1,0 +1,48 @@
+[
+  {
+    "tipo": "youtube",
+    "titulo": "Rutina full body para principiantes",
+    "categoria": "Entrenamiento",
+    "descripcion": "Rutina completa de 30 minutos para empezar en el gym sin experiencia previa.",
+    "youtube_id": "PEGA_EL_ID_DE_YOUTUBE_AQUI"
+  },
+  {
+    "tipo": "instagram",
+    "titulo": "Qué comer antes y después del gym",
+    "categoria": "Nutrición",
+    "descripcion": "Los mejores alimentos para maximizar tu rendimiento y recuperación muscular.",
+    "url": "https://www.instagram.com/reel/PEGA_EL_CODIGO_DEL_REEL/",
+    "thumbnail": "thumb-nutricion-gym.jpg"
+  },
+  {
+    "tipo": "tiktok",
+    "titulo": "5 errores que te impiden progresar",
+    "categoria": "Consejos",
+    "descripcion": "Los errores más comunes en el gym y cómo corregirlos para ver resultados más rápido.",
+    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
+    "thumbnail": "thumb-errores-gym.jpg"
+  },
+  {
+    "tipo": "instagram",
+    "titulo": "Motivación para no faltar al gym",
+    "categoria": "Motivación",
+    "descripcion": "Cuando no tienes ganas pero igual vas. El secreto de la constancia.",
+    "url": "https://www.instagram.com/reel/PEGA_EL_CODIGO_DEL_REEL/",
+    "thumbnail": "thumb-motivacion.jpg"
+  },
+  {
+    "tipo": "tiktok",
+    "titulo": "Rutina de piernas en 60 segundos",
+    "categoria": "Entrenamiento",
+    "descripcion": "Los ejercicios más efectivos para piernas resumidos en un minuto.",
+    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
+    "thumbnail": "thumb-rutina-piernas.jpg"
+  },
+  {
+    "tipo": "youtube",
+    "titulo": "Cómo leer las etiquetas nutricionales",
+    "categoria": "Nutrición",
+    "descripcion": "Aprende a interpretar los valores nutricionales para tomar mejores decisiones al comer.",
+    "youtube_id": "PEGA_EL_ID_DE_YOUTUBE_AQUI"
+  }
+]
