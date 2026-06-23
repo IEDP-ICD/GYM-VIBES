@@ -1,0 +1,27 @@
+[
+  {
+    "titulo": "Rutina de pecho y tríceps",
+    "subtitulo": "Intermedio · 45 min",
+    "archivo": "rutina-pecho-triceps.jpg"
+  },
+  {
+    "titulo": "Rutina de piernas y glúteos",
+    "subtitulo": "Todos los niveles · 50 min",
+    "archivo": "rutina-piernas-gluteos.jpg"
+  },
+  {
+    "titulo": "Rutina de espalda y bíceps",
+    "subtitulo": "Intermedio · 40 min",
+    "archivo": "rutina-espalda-biceps.jpg"
+  },
+  {
+    "titulo": "Full Body para principiantes",
+    "subtitulo": "Principiante · 30 min",
+    "archivo": "rutina-full-body.jpg"
+  },
+  {
+    "titulo": "HIIT quema grasa 20 min",
+    "subtitulo": "Avanzado · 20 min",
+    "archivo": "rutina-hiit.jpg"
+  }
+]
