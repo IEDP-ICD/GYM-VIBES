@@ -1,0 +1,27 @@
+[
+  {
+    "titulo": "5 hábitos para no abandonar el gym",
+    "subtitulo": "Motivación · Constancia",
+    "archivo": "habitos-gym.jpg"
+  },
+  {
+    "titulo": "Cómo crear una rutina de sueño fit",
+    "subtitulo": "Descanso · Recuperación",
+    "archivo": "rutina-sueno.jpg"
+  },
+  {
+    "titulo": "Mentalidad ganadora en el gym",
+    "subtitulo": "Mindset · Motivación",
+    "archivo": "mentalidad-ganadora.jpg"
+  },
+  {
+    "titulo": "Cómo fijar metas fitness reales",
+    "subtitulo": "Metas · Planificación",
+    "archivo": "metas-fitness.jpg"
+  },
+  {
+    "titulo": "Señales de que estás progresando",
+    "subtitulo": "Progreso · Autoconfianza",
+    "archivo": "senales-progreso.jpg"
+  }
+]
