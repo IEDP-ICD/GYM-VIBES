@@ -12,7 +12,8 @@
   ║  │   ├── logo.png              ← logo de GYM VIBES          ║
   ║  │   └── escudo.png            ← escudo IEDP                 ║
   ║  ├── videos/                                                 ║
-  ║  │   └── videos.json           ← videos de YouTube          ║
+  ║  │   ├── videos.json           ← YouTube, Instagram, TikTok ║
+  ║  │   └── (thumbnails JPG/PNG — portadas de cada video)      ║
   ║  ├── rutinas/                                                ║
   ║  │   ├── rutinas.json          ← infografías de rutinas      ║
   ║  │   └── (imágenes JPG/PNG verticales de Canva)             ║
@@ -656,30 +657,125 @@
       background: var(--acero);
     }
 
+    /* ── Tarjeta de video (YouTube / Instagram / TikTok) ─────── */
     .video-card {
       background: var(--carbon);
+      border: 1px solid var(--acero);
+      border-radius: var(--radio);
       overflow: hidden;
-      transition: background 0.2s;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
     }
 
-    .video-card:hover { background: var(--carbon-claro); }
+    .video-card:hover {
+      border-color: var(--verde);
+      transform: translateY(-4px);
+    }
 
-    /* Contenedor 16:9 del iframe */
-    .video-wrap {
+    /* ── Contenedor de la miniatura (thumbnail) ─────────────── */
+    /* Para YouTube se sigue usando iframe 16:9                  */
+    /* Para Instagram y TikTok se muestra imagen + botón link    */
+    .video-thumb-wrap {
+      aspect-ratio: 16 / 9;
+      position: relative;
+      overflow: hidden;
+      background: var(--negro);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Thumbnail (imagen de portada del video) */
+    .video-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s, filter 0.3s;
+      filter: brightness(0.75);
+    }
+
+    .video-card:hover .video-thumb-wrap img {
+      transform: scale(1.04);
+      filter: brightness(0.6);
+    }
+
+    /* ── Overlay con botón de play y logo de la plataforma ──── */
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    /* Botón de play circular */
+    .play-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(6px);
+      border: 2px solid rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      transition: background 0.2s, transform 0.2s;
+      /* El triángulo de play se hace con CSS */
+      color: white;
+    }
+
+    .video-card:hover .play-btn {
+      background: var(--verde);
+      border-color: var(--verde);
+      transform: scale(1.1);
+      color: var(--negro);
+    }
+
+    /* Badge de plataforma (Instagram / TikTok / YouTube) */
+    .plataforma-badge {
+      font-family: var(--font-ui);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(6px);
+    }
+
+    /* Colores por plataforma */
+    .badge-instagram { border-color: #e1306c; color: #f77bb5; }
+    .badge-tiktok    { border-color: #69c9d0; color: #69c9d0; }
+    .badge-youtube   { border-color: #ff0000; color: #ff6666; }
+
+    /* Iframe para YouTube (mantiene el embed original) */
+    .video-iframe-wrap {
       aspect-ratio: 16 / 9;
       background: var(--negro);
     }
 
-    .video-wrap iframe {
+    .video-iframe-wrap iframe {
       width: 100%;
       height: 100%;
       border: none;
       display: block;
     }
 
-    /* Info debajo del video */
+    /* ── Info debajo del video ──────────────────────────────── */
     .video-info {
       padding: 1.25rem 1.5rem 1.75rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
 
     .video-cat {
@@ -689,7 +785,6 @@
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--verde);
-      margin-bottom: 6px;
     }
 
     .video-titulo {
@@ -697,7 +792,7 @@
       font-size: 1.25rem;
       color: var(--blanco);
       letter-spacing: 0.03em;
-      margin-bottom: 5px;
+      line-height: 1.1;
     }
 
     .video-desc {
@@ -707,6 +802,24 @@
       font-weight: 300;
       line-height: 1.6;
     }
+
+    /* Botón "Ver en Instagram / TikTok" en el pie de la tarjeta */
+    .video-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--verde);
+      text-decoration: none;
+      margin-top: 8px;
+      transition: gap 0.2s;
+    }
+
+    .video-link-btn:hover { gap: 12px; }
 
     /* ═══════════════════════════════════════════════════════════
        SECCIÓN DE INFOGRAFÍAS (rutinas, nutrición, tips)
@@ -1348,18 +1461,22 @@
 
 
   <!-- ═══════════════════════════════════════════════════════════
-       VIDEOS
+       VIDEOS — YouTube, Instagram y TikTok (Opción A)
        Archivo: videos/videos.json
-       Formato:
-       [
-         {
-           "titulo": "Rutina full body para principiantes",
-           "categoria": "Entrenamiento",
-           "descripcion": "Rutina completa de 30 minutos para empezar en el gym",
-           "youtube_id": "CODIGO_DEL_VIDEO_EN_YOUTUBE"
-         }
-       ]
-       El youtube_id está en la URL: youtube.com/watch?v=ESTE_CODIGO
+
+       CAMPO "tipo" define cómo se muestra:
+         "youtube"   → se embebe directo con iframe
+         "instagram" → muestra thumbnail + botón que abre el reel
+         "tiktok"    → muestra thumbnail + botón que abre el video
+
+       Para youtube:
+         "youtube_id": "dQw4w9WgXcQ"
+         (el código en la URL: youtube.com/watch?v=ESTE_CODIGO)
+
+       Para instagram y tiktok:
+         "url": "https://www.instagram.com/reel/CODIGO/"
+         "thumbnail": "nombre-del-archivo.jpg"
+         (sube el thumbnail a la carpeta videos/)
        ═══════════════════════════════════════════════════════════ -->
   <section class="seccion" id="videos">
     <div class="contenedor">
@@ -1677,6 +1794,10 @@
 
 
     /* ════ VIDEOS ═══════════════════════════════════════════════ */
+    /* ════ VIDEOS — YouTube, Instagram y TikTok ════════════════
+       Lee videos/videos.json y genera la tarjeta correcta
+       según el campo "tipo" de cada video.
+    ════════════════════════════════════════════════════════════ */
     async function cargarVideos() {
       const grid = document.getElementById('videos-grid');
       try {
@@ -1689,23 +1810,107 @@
           return;
         }
 
-        grid.innerHTML = videos.map(v => `
-          <div class="video-card">
-            <div class="video-wrap">
-              <iframe
-                src="https://www.youtube.com/embed/${v.youtube_id}"
-                title="${esc(v.titulo)}"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen loading="lazy"
-              ></iframe>
+        grid.innerHTML = videos.map(v => {
+          /*
+           * Según el "tipo" se construye la parte visual de la tarjeta:
+           *   youtube   → iframe embebido
+           *   instagram → thumbnail + overlay + link al reel
+           *   tiktok    → thumbnail + overlay + link al video
+           */
+          let mediaHTML = '';
+          let linkBtn   = '';
+
+          if (v.tipo === 'youtube') {
+            /* ── YouTube: iframe estándar embebido ───────────── */
+            mediaHTML = `
+              <div class="video-iframe-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/${v.youtube_id}"
+                  title="${esc(v.titulo)}"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            `;
+
+          } else if (v.tipo === 'instagram') {
+            /* ── Instagram: thumbnail + botón que abre el reel ─ */
+            /* La thumbnail es una foto/captura del video         */
+            /* El usuario hace click y va al reel en Instagram    */
+            const badgeClass = 'badge-instagram';
+            const icono      = '📸';
+            const plataforma = 'Instagram Reel';
+            mediaHTML = `
+              <div class="video-thumb-wrap">
+                <img
+                  src="videos/${v.thumbnail}"
+                  alt="${esc(v.titulo)}"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+                <!-- Overlay: click abre el reel en Instagram -->
+                <a class="video-overlay" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
+                  <div class="play-btn">▶</div>
+                  <span class="plataforma-badge ${badgeClass}">${icono} ${plataforma}</span>
+                </a>
+              </div>
+            `;
+            /* Botón textual en el pie de la tarjeta */
+            linkBtn = `<a class="video-link-btn" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">
+              Ver en Instagram →
+            </a>`;
+
+          } else if (v.tipo === 'tiktok') {
+            /* ── TikTok: thumbnail + botón que abre el video ─── */
+            const badgeClass = 'badge-tiktok';
+            const icono      = '🎵';
+            const plataforma = 'TikTok';
+            mediaHTML = `
+              <div class="video-thumb-wrap">
+                <img
+                  src="videos/${v.thumbnail}"
+                  alt="${esc(v.titulo)}"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+                <a class="video-overlay" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer" aria-label="Ver en TikTok">
+                  <div class="play-btn">▶</div>
+                  <span class="plataforma-badge ${badgeClass}">${icono} ${plataforma}</span>
+                </a>
+              </div>
+            `;
+            linkBtn = `<a class="video-link-btn" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">
+              Ver en TikTok →
+            </a>`;
+
+          } else {
+            /* ── Tipo desconocido: mostrar placeholder ──────── */
+            mediaHTML = `
+              <div class="video-thumb-wrap" style="background:var(--acero)">
+                <div style="color:var(--gris-texto);font-size:2rem;text-align:center;padding:2rem">
+                  🎬<br>
+                  <span style="font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.1em">
+                    Tipo de video no reconocido
+                  </span>
+                </div>
+              </div>
+            `;
+          }
+
+          /* Tarjeta completa */
+          return `
+            <div class="video-card">
+              ${mediaHTML}
+              <div class="video-info">
+                <div class="video-cat">▶ ${esc(v.categoria || 'Video')}</div>
+                <div class="video-titulo">${esc(v.titulo)}</div>
+                <p class="video-desc">${esc(v.descripcion || '')}</p>
+                ${linkBtn}
+              </div>
             </div>
-            <div class="video-info">
-              <div class="video-cat">▶ ${esc(v.categoria || 'Video')}</div>
-              <div class="video-titulo">${esc(v.titulo)}</div>
-              <p class="video-desc">${esc(v.descripcion || '')}</p>
-            </div>
-          </div>
-        `).join('');
+          `;
+        }).join('');
 
       } catch {
         grid.innerHTML = msgVacioGrid('🎬', 'SIN VIDEOS', 'Crea videos/videos.json');
