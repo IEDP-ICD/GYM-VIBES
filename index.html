@@ -450,7 +450,7 @@
       height: 200px;
       border-radius: 50%;
       object-fit: contain;
-      background: var(--carbon);
+      background: var(--blanco);
       padding: 8px;
       border: 3px solid var(--verde);
       box-shadow:
@@ -1038,11 +1038,11 @@
     }
 
     /* ═══════════════════════════════════════════════════════════
-       EQUIPO — 3 INTEGRANTES
+       EQUIPO — 4 INTEGRANTES
        ═══════════════════════════════════════════════════════════ */
     #equipo-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2px;
       background: var(--acero);
     }
@@ -1400,7 +1400,7 @@
         <!-- Stats rápidas -->
         <div class="hero-stats">
           <div class="hero-stat">
-            <div class="hero-stat-num">3</div>
+            <div class="hero-stat-num">4</div>
             <div class="hero-stat-label">Integrantes</div>
           </div>
           <div class="hero-stat">
@@ -1634,7 +1634,7 @@
 
 
   <!-- ═══════════════════════════════════════════════════════════
-       QUIÉNES SOMOS — 3 INTEGRANTES
+       QUIÉNES SOMOS — 4 INTEGRANTES
        Archivo: equipo/equipo.json
        Formato de integrantes:
        [
