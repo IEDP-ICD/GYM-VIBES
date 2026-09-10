@@ -23,6 +23,9 @@
   ║  ├── tips/                                                   ║
   ║  │   ├── tips.json             ← infografías de tips/motiv.  ║
   ║  │   └── (imágenes JPG/PNG verticales de Canva)             ║
+  ║  ├── galeria/                                                ║
+  ║  │   ├── galeria.json          ← fotos de detrás de cámaras  ║
+  ║  │   └── (fotos JPG/PNG del equipo trabajando)               ║
   ║  └── equipo/                                                 ║
   ║      ├── equipo.json           ← misión, visión, integrantes ║
   ║      └── (fotos del equipo)                                  ║
@@ -1038,6 +1041,74 @@
       gap: 6px;
     }
 
+    /* Galería: naranja/coral */
+    .tag-galeria {
+      background: rgba(255,107,53,0.1);
+      border: 1px solid rgba(255,107,53,0.3);
+      color: #ff6b35;
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       GALERÍA — DETRÁS DE CÁMARAS
+       Rejilla de fotos (no carrusel) con proporción 4:3, distinta a
+       las infografías verticales de Canva
+       ═══════════════════════════════════════════════════════════ */
+    #galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .galeria-card {
+      background: var(--carbon);
+      border: 1px solid var(--acero);
+      border-radius: var(--radio);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .galeria-card:hover {
+      transform: translateY(-6px);
+      border-color: #ff6b35;
+    }
+
+    .galeria-img-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--negro);
+    }
+
+    .galeria-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .galeria-card:hover .galeria-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .galeria-titulo {
+      padding: 12px 14px;
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--blanco-90);
+    }
+
     /* ═══════════════════════════════════════════════════════════
        EQUIPO — 4 INTEGRANTES
        ═══════════════════════════════════════════════════════════ */
@@ -1185,9 +1256,10 @@
 
     #lightbox.activo { display: flex; }
 
-    /* Las infografías son verticales — el lightbox las muestra en alto */
+    /* Sirve tanto para las infografías verticales como para las
+       fotos horizontales de la galería — se ajusta sin recortar */
     #lightbox-img {
-      max-width: 50vw;   /* Más estrecha porque es vertical */
+      max-width: 70vw;
       max-height: 90vh;
       object-fit: contain;
       border-radius: var(--radio);
@@ -1368,6 +1440,7 @@
       <li><a href="#rutinas">Rutinas</a></li>
       <li><a href="#nutricion">Nutrición</a></li>
       <li><a href="#tips">Tips</a></li>
+      <li><a href="#galeria">Galería</a></li>
       <li><a href="#equipo">Equipo</a></li>
     </ul>
   </nav>
@@ -1635,6 +1708,44 @@
 
 
   <!-- ═══════════════════════════════════════════════════════════
+       GALERÍA: DETRÁS DE CÁMARAS
+       Archivo: galeria/galeria.json
+       Formato:
+       [
+         {
+           "titulo": "Diseño y desarrollo web",
+           "archivo": "diseno-desarrollo-web.jpg"
+         }
+       ]
+       Las fotos van en galeria/ (cualquier proporción, se recortan a 4:3)
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="seccion-franja"></div>
+  <section class="seccion seccion-carbon" id="galeria">
+    <div class="contenedor">
+      <div class="seccion-header">
+        <div class="seccion-meta">
+          <div class="seccion-eyebrow">06 · Detrás de cámaras</div>
+          <div class="seccion-titulo">DETRÁS DE<br><span style="color:#ff6b35">CÁMARAS</span></div>
+        </div>
+        <div>
+          <span class="tag-galeria">📸 Behind the scenes</span>
+          <p class="seccion-sub" style="margin-top:0.75rem">
+            Así se hace GYM VIBES. Haz click en cualquier foto para verla en grande.
+          </p>
+        </div>
+      </div>
+
+      <div id="galeria-grid">
+        <div class="skeleton" style="height:220px"></div>
+        <div class="skeleton" style="height:220px"></div>
+        <div class="skeleton" style="height:220px"></div>
+        <div class="skeleton" style="height:220px"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
        QUIÉNES SOMOS — 4 INTEGRANTES
        Archivo: equipo/equipo.json
        Formato de integrantes:
@@ -1652,7 +1763,7 @@
     <div class="contenedor">
       <div class="seccion-header">
         <div class="seccion-meta">
-          <div class="seccion-eyebrow">06 · El equipo</div>
+          <div class="seccion-eyebrow">07 · El equipo</div>
           <div class="seccion-titulo">QUIÉNES<br><span>SOMOS</span></div>
         </div>
         <p class="seccion-sub" id="sobre-nosotros-texto">Cargando...</p>
@@ -1721,7 +1832,8 @@
         cargarVideos(),
         cargarInfografias('rutinas',   'rutinas-track'),
         cargarInfografias('nutricion', 'nutricion-track'),
-        cargarInfografias('tips',      'tips-track')
+        cargarInfografias('tips',      'tips-track'),
+        cargarGaleria()
       ]);
 
       /* Activar el drag-to-scroll en los tres carruseles */
@@ -1984,6 +2096,41 @@
             </div>
           </div>
         `;
+      }
+    }
+
+
+    /* ════ GALERÍA — Detrás de cámaras ════════════════════════════
+       Lee galeria/galeria.json y arma la rejilla de fotos
+    ════════════════════════════════════════════════════════════ */
+    async function cargarGaleria() {
+      const grid = document.getElementById('galeria-grid');
+      try {
+        const resp = await fetch('galeria/galeria.json');
+        if (!resp.ok) throw new Error();
+        const fotos = await resp.json();
+
+        if (!fotos.length) {
+          grid.innerHTML = msgVacioGrid('📸', 'Sin fotos aún', 'Sube fotos a la carpeta <strong>galeria/</strong> y actualiza <strong>galeria.json</strong>');
+          return;
+        }
+
+        grid.innerHTML = fotos.map(foto => `
+          <div class="galeria-card"
+               onclick="abrirLightbox('galeria/${foto.archivo}', '${esc(foto.titulo)}')">
+            <div class="galeria-img-wrap">
+              <img
+                src="galeria/${foto.archivo}"
+                alt="${esc(foto.titulo)}"
+                loading="lazy"
+              />
+            </div>
+            <div class="galeria-titulo">${esc(foto.titulo)}</div>
+          </div>
+        `).join('');
+
+      } catch {
+        grid.innerHTML = msgVacioGrid('📁', 'Archivo no encontrado', 'Crea el archivo <strong>galeria/galeria.json</strong> para mostrar las fotos');
       }
     }
 
