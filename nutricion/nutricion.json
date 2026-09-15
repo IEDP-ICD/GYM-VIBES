@@ -23,5 +23,25 @@
     "titulo": "Hidratación en el deporte",
     "subtitulo": "Agua e hidratación",
     "archivo": "hidratacion-deporte.jpg"
+  },
+  {
+    "titulo": "Pechuga de pollo con ensalada",
+    "subtitulo": "Alta en proteína · ~450 kcal",
+    "archivo": "pechuga-pollo-ensalada.jpg"
+  },
+  {
+    "titulo": "Puré de papa con huevo, pollo y verduras",
+    "subtitulo": "Comida completa · ~550 kcal",
+    "archivo": "pure-papa-pollo-verduras.jpg"
+  },
+  {
+    "titulo": "Tortilla de huevos, espinacas y queso",
+    "subtitulo": "Desayuno · Alta en proteína",
+    "archivo": "tortilla-espinacas-queso.jpg"
+  },
+  {
+    "titulo": "Desayuno GYM: huesos, tocineta y más",
+    "subtitulo": "Desayuno energético",
+    "archivo": "desayuno-huesos-tocineta.jpg"
   }
 ]
