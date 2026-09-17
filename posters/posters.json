@@ -1,0 +1,22 @@
+[
+  {
+    "titulo": "Fénix Gym — Tu lugar de entrenamiento",
+    "subtitulo": "Equipo Gym Vibes",
+    "archivo": "poster-fenix-equipo.jpg"
+  },
+  {
+    "titulo": "Entrena con nosotros",
+    "subtitulo": "Equipos y ambiente de primera",
+    "archivo": "poster-entrenadores.jpg"
+  },
+  {
+    "titulo": "¡Saca tu fuego interior!",
+    "subtitulo": "Entrena en Fénix Gym",
+    "archivo": "poster-fuego-interior.jpg"
+  },
+  {
+    "titulo": "¡Únete a Fénix Gym!",
+    "subtitulo": "Tu renacimiento fitness",
+    "archivo": "poster-unete.jpg"
+  }
+]

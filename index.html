@@ -1445,6 +1445,7 @@
       <li><a href="#rutinas">Rutinas</a></li>
       <li><a href="#nutricion">Nutrición</a></li>
       <li><a href="#tips">Tips</a></li>
+      <li><a href="#posters">Posters</a></li>
       <li><a href="#galeria">Galería</a></li>
       <li><a href="#equipo">Equipo</a></li>
     </ul>
@@ -1725,11 +1726,55 @@
        Las fotos van en galeria/ (cualquier proporción, se recortan a 4:3)
        ═══════════════════════════════════════════════════════════ -->
   <div class="seccion-franja"></div>
+  <!-- ═══════════════════════════════════════════════════════════
+       INFOGRAFÍAS: POSTERS PROMOCIONALES
+       Archivo: posters/posters.json
+       Formato:
+       [
+         {
+           "titulo": "¡Únete a Fénix Gym!",
+           "subtitulo": "Tu renacimiento fitness",
+           "archivo": "poster-unete.jpg"
+         }
+       ]
+       Las imágenes son verticales (9:16) — súbelas a posters/
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="seccion" id="posters">
+    <div class="contenedor">
+      <div class="seccion-header">
+        <div class="seccion-meta">
+          <div class="seccion-eyebrow">06 · Promociones</div>
+          <div class="seccion-titulo">POSTERS<br><span>PROMOCIONALES</span></div>
+        </div>
+        <div>
+          <span class="tag-rutinas">📣 Piezas para redes</span>
+          <p class="seccion-sub" style="margin-top:0.75rem">
+            Desliza para ver todos los posters. Haz click en cualquiera para verlo en grande.
+          </p>
+        </div>
+      </div>
+
+      <div class="infografias-scroll" id="posters-scroll">
+        <div class="infografias-track" id="posters-track">
+          <div class="skeleton" style="width:280px;height:498px;flex-shrink:0"></div>
+          <div class="skeleton" style="width:280px;height:498px;flex-shrink:0"></div>
+          <div class="skeleton" style="width:280px;height:498px;flex-shrink:0"></div>
+          <div class="skeleton" style="width:280px;height:498px;flex-shrink:0"></div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span class="scroll-hint-arrow">→</span>
+        <span>Desliza para ver más posters</span>
+      </div>
+    </div>
+  </section>
+
+
   <section class="seccion seccion-carbon" id="galeria">
     <div class="contenedor">
       <div class="seccion-header">
         <div class="seccion-meta">
-          <div class="seccion-eyebrow">06 · Detrás de cámaras</div>
+          <div class="seccion-eyebrow">07 · Detrás de cámaras</div>
           <div class="seccion-titulo">DETRÁS DE<br><span style="color:#ff6b35">CÁMARAS</span></div>
         </div>
         <div>
@@ -1768,7 +1813,7 @@
     <div class="contenedor">
       <div class="seccion-header">
         <div class="seccion-meta">
-          <div class="seccion-eyebrow">07 · El equipo</div>
+          <div class="seccion-eyebrow">08 · El equipo</div>
           <div class="seccion-titulo">QUIÉNES<br><span>SOMOS</span></div>
         </div>
         <p class="seccion-sub" id="sobre-nosotros-texto">Cargando...</p>
@@ -1838,13 +1883,15 @@
         cargarInfografias('rutinas',   'rutinas-track'),
         cargarInfografias('nutricion', 'nutricion-track'),
         cargarInfografias('tips',      'tips-track'),
+        cargarInfografias('posters',   'posters-track'),
         cargarGaleria()
       ]);
 
-      /* Activar el drag-to-scroll en los tres carruseles */
+      /* Activar el drag-to-scroll en los carruseles */
       activarDragScroll('rutinas-scroll');
       activarDragScroll('nutricion-scroll');
       activarDragScroll('tips-scroll');
+      activarDragScroll('posters-scroll');
     });
 
 
