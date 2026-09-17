@@ -1,27 +1,17 @@
 [
   {
-    "titulo": "5 hábitos para no abandonar el gym",
-    "subtitulo": "Motivación · Constancia",
-    "archivo": "habitos-gym.jpg"
+    "titulo": "Tips de gimnasio: entrenamiento y técnica",
+    "subtitulo": "Alimentación, descanso y mentalidad",
+    "archivo": "tip-entrenamiento-alimentacion.jpg"
   },
   {
-    "titulo": "Cómo crear una rutina de sueño fit",
-    "subtitulo": "Descanso · Recuperación",
-    "archivo": "rutina-sueno.jpg"
+    "titulo": "El descanso también es parte del entrenamiento",
+    "subtitulo": "Consejos generales para tu rutina de gym",
+    "archivo": "tip-descanso-consejos.jpg"
   },
   {
-    "titulo": "Mentalidad ganadora en el gym",
-    "subtitulo": "Mindset · Motivación",
-    "archivo": "mentalidad-ganadora.jpg"
-  },
-  {
-    "titulo": "Cómo fijar metas fitness reales",
-    "subtitulo": "Metas · Planificación",
-    "archivo": "metas-fitness.jpg"
-  },
-  {
-    "titulo": "Señales de que estás progresando",
-    "subtitulo": "Progreso · Autoconfianza",
-    "archivo": "senales-progreso.jpg"
+    "titulo": "Tips de ejercicios",
+    "subtitulo": "Alimentación en el gym",
+    "archivo": "tip-ejercicios-alimentacion.jpg"
   }
 ]

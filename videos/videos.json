@@ -1,17 +1,18 @@
 [
   {
-    "tipo": "youtube",
+    "tipo": "tiktok",
     "titulo": "Rutina full body para principiantes",
     "categoria": "Entrenamiento",
     "descripcion": "Rutina completa de 30 minutos para empezar en el gym sin experiencia previa.",
-    "youtube_id": "PEGA_EL_ID_DE_YOUTUBE_AQUI"
+    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
+    "thumbnail": "thumb-rutina-fullbody.jpg"
   },
   {
-    "tipo": "instagram",
+    "tipo": "tiktok",
     "titulo": "Qué comer antes y después del gym",
     "categoria": "Nutrición",
     "descripcion": "Los mejores alimentos para maximizar tu rendimiento y recuperación muscular.",
-    "url": "https://www.instagram.com/reel/PEGA_EL_CODIGO_DEL_REEL/",
+    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
     "thumbnail": "thumb-nutricion-gym.jpg"
   },
   {
@@ -23,11 +24,11 @@
     "thumbnail": "thumb-errores-gym.jpg"
   },
   {
-    "tipo": "instagram",
+    "tipo": "tiktok",
     "titulo": "Motivación para no faltar al gym",
     "categoria": "Motivación",
     "descripcion": "Cuando no tienes ganas pero igual vas. El secreto de la constancia.",
-    "url": "https://www.instagram.com/reel/PEGA_EL_CODIGO_DEL_REEL/",
+    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
     "thumbnail": "thumb-motivacion.jpg"
   },
   {
@@ -39,10 +40,11 @@
     "thumbnail": "thumb-rutina-piernas.jpg"
   },
   {
-    "tipo": "youtube",
+    "tipo": "tiktok",
     "titulo": "Cómo leer las etiquetas nutricionales",
     "categoria": "Nutrición",
     "descripcion": "Aprende a interpretar los valores nutricionales para tomar mejores decisiones al comer.",
-    "youtube_id": "PEGA_EL_ID_DE_YOUTUBE_AQUI"
+    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
+    "thumbnail": "thumb-etiquetas-nutricionales.jpg"
   }
 ]
