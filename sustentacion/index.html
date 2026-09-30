@@ -197,7 +197,7 @@
     .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--acero); border-radius: var(--radio-md); overflow: hidden; }
     .mv-card { background: var(--carbon); padding: clamp(1.3rem, 3.2vh, 2.2rem) clamp(1.5rem, 3vw, 2.3rem); }
     .mv-card h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(1.9rem, 4vh, 2.5rem); color: var(--verde); margin-bottom: clamp(.4rem, 1vh, .65rem); letter-spacing: .02em; }
-    .mv-card p { font-size: clamp(1.25rem, 2.7vh, 1.55rem); color: var(--blanco-90); line-height: 1.42; font-weight: 300; }
+    .mv-card p { font-size: clamp(1.4rem, 2.9vh, 1.7rem); color: var(--blanco-90); line-height: 1.4; font-weight: 300; }
 
     .tech-chips { display: flex; flex-wrap: wrap; gap: 12px; }
     .tech-chips span {
@@ -210,23 +210,22 @@
     .segmento-card { background: var(--carbon); border: 1px solid var(--acero); border-radius: var(--radio-md); padding: clamp(1.3rem, 3.1vh, 2.1rem); }
     .segmento-card .icono { font-size: clamp(1.9rem, 3.8vh, 2.5rem); margin-bottom: clamp(.3rem, .8vh, .5rem); display: block; }
     .segmento-card h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(1.6rem, 3.2vh, 2rem); color: var(--verde); margin-bottom: clamp(.3rem, .8vh, .5rem); letter-spacing: .02em; }
-    .segmento-card p { font-size: clamp(1.25rem, 2.6vh, 1.5rem); color: var(--blanco-90); line-height: 1.42; font-weight: 300; }
+    .segmento-card p { font-size: clamp(1.4rem, 2.9vh, 1.7rem); color: var(--blanco-90); line-height: 1.4; font-weight: 300; }
 
-    .servicio-bloque { background: var(--carbon); border: 1px solid var(--acero); border-radius: var(--radio-md); padding: clamp(1.1rem, 2.6vh, 1.8rem) clamp(1.4rem, 2.8vw, 2rem); display: flex; gap: 18px; align-items: flex-start; margin-bottom: clamp(.75rem, 1.9vh, 1.2rem); }
-    .servicio-bloque .icono {
-      font-size: clamp(1.8rem, 3.6vh, 2.4rem); flex-shrink: 0; width: clamp(52px, 8.4vh, 68px); height: clamp(52px, 8.4vh, 68px);
-      background: var(--verde-suave); border: 1px solid var(--verde); border-radius: var(--radio-sm); display: flex; align-items: center; justify-content: center;
+    /* Paleta de colores — discos estilo disco de pesas */
+    .paleta-grid { display: flex; align-items: flex-end; justify-content: center; flex-wrap: wrap; gap: clamp(.9rem, 2.4vw, 1.8rem); }
+    .paleta-chip { display: flex; flex-direction: column; align-items: center; gap: clamp(.5rem, 1.3vh, .9rem); }
+    .paleta-chip .swatch {
+      width: clamp(120px, 21vh, 190px); height: clamp(120px, 21vh, 190px); border-radius: 50%; position: relative;
+      border: 10px solid rgba(0,0,0,.55); box-shadow: inset 0 0 0 4px rgba(255,255,255,.12), 0 10px 26px rgba(0,0,0,.6);
     }
-    .servicio-bloque h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(1.55rem, 3.1vh, 2rem); color: var(--blanco); margin-bottom: 4px; letter-spacing: .02em; }
-    .servicio-bloque p { font-size: clamp(1.2rem, 2.4vh, 1.42rem); color: var(--blanco-90); line-height: 1.38; font-weight: 300; }
-
-    /* Paleta de colores */
-    .paleta-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(.6rem, 1.5vw, 1rem); }
-    .paleta-chip { border: 1px solid var(--acero); border-radius: var(--radio-md); overflow: hidden; display: flex; flex-direction: column; }
-    .paleta-chip .swatch { height: clamp(100px, 19vh, 165px); }
-    .paleta-chip .info { background: var(--carbon); padding: clamp(.55rem, 1.3vh, .9rem) clamp(.45rem, 1.1vw, .7rem); text-align: center; }
-    .paleta-chip .nombre { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(1.3rem, 2.7vh, 1.6rem); color: var(--blanco); letter-spacing: .02em; }
-    .paleta-chip .hex { font-family: 'Outfit', sans-serif; font-size: clamp(1.02rem, 2vh, 1.2rem); color: var(--gris-texto); margin-top: 4px; }
+    .paleta-chip .swatch::after {
+      content: ''; position: absolute; inset: 32%; border-radius: 50%; background: var(--negro);
+      box-shadow: inset 0 3px 8px rgba(0,0,0,.8);
+    }
+    .paleta-chip .info { text-align: center; }
+    .paleta-chip .nombre { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(1.4rem, 2.9vh, 1.75rem); color: var(--blanco); letter-spacing: .02em; }
+    .paleta-chip .hex { font-family: 'Outfit', sans-serif; font-size: clamp(1.1rem, 2.1vh, 1.3rem); color: var(--gris-texto); margin-top: 4px; }
     .fuentes-row { display: flex; gap: clamp(.8rem, 2vw, 1.5rem); justify-content: center; flex-wrap: wrap; }
     .fuente-card { background: var(--carbon); border: 1px solid var(--acero); border-radius: var(--radio-md); padding: clamp(.9rem, 2.2vh, 1.5rem) clamp(1.3rem, 2.8vw, 2rem); text-align: center; }
     .fuente-card .muestra { font-size: clamp(1.8rem, 4.2vh, 2.7rem); margin-bottom: 4px; color: var(--verde); }
@@ -241,8 +240,8 @@
       display: flex; justify-content: space-between; align-items: baseline; gap: .8rem;
       border-bottom: 1px solid var(--acero); padding: clamp(.36rem, .95vh, .58rem) 0;
     }
-    .costo-item .desc { font-size: clamp(.95rem, 1.9vh, 1.18rem); color: var(--blanco-90); line-height: 1.28; text-align: left; font-weight: 300; }
-    .costo-item .valor { font-size: clamp(1rem, 1.95vh, 1.22rem); color: var(--verde); font-weight: 700; white-space: nowrap; flex-shrink: 0; font-family: 'Outfit', sans-serif; }
+    .costo-item .desc { font-size: clamp(1.2rem, 2.4vh, 1.5rem); color: var(--blanco-90); line-height: 1.28; text-align: left; font-weight: 300; }
+    .costo-item .valor { font-size: clamp(1.25rem, 2.45vh, 1.55rem); color: var(--verde); font-weight: 700; white-space: nowrap; flex-shrink: 0; font-family: 'Outfit', sans-serif; }
     .costos-total {
       display: flex; justify-content: space-between; align-items: center; width: 100%;
       background: linear-gradient(135deg, var(--verde-suave), rgba(170,255,0,.03));
@@ -254,16 +253,45 @@
 
     /* Galería de posters — cada tarjeta mantiene su proporción real, sin recortar ni achatar */
     .posters-grid { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: clamp(.7rem, 1.8vw, 1.3rem); width: 100%; }
-    .poster-card { height: clamp(150px, 28vh, 340px); flex-shrink: 0; display: flex; flex-direction: column; border: 1px solid var(--acero); border-radius: var(--radio-md); overflow: hidden; background: var(--carbon); box-shadow: var(--sombra-md); }
+    .poster-card { height: clamp(170px, 32vh, 400px); flex-shrink: 0; display: flex; flex-direction: column; border: 1px solid var(--acero); border-radius: var(--radio-md); overflow: hidden; background: var(--carbon); box-shadow: var(--sombra-md); cursor: pointer; transition: transform .25s, box-shadow .25s, border-color .25s; }
+    .poster-card:hover { transform: scale(1.03); border-color: var(--verde); box-shadow: var(--verde-glow); }
     .poster-card img { height: 100%; width: auto; flex: 1 1 auto; object-fit: contain; background: var(--negro-suave); min-height: 0; }
-    .poster-card .cap { padding: clamp(.5rem, 1.2vh, .8rem) clamp(.7rem, 1.6vw, 1rem); text-align: center; flex-shrink: 0; }
-    .poster-card .cap .t { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.1rem, 2.3vh, 1.35rem); color: var(--verde); letter-spacing: .02em; line-height: 1.1; }
-    .poster-card .cap .s { font-family: 'Outfit', sans-serif; font-size: clamp(.85rem, 1.7vh, 1rem); color: var(--gris-texto); margin-top: 2px; }
+    .poster-card .cap { padding: clamp(.55rem, 1.3vh, .9rem) clamp(.7rem, 1.6vw, 1rem); text-align: center; flex-shrink: 0; }
+    .poster-card .cap .t { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.25rem, 2.5vh, 1.5rem); color: var(--verde); letter-spacing: .02em; line-height: 1.1; }
+    .poster-card .cap .s { font-family: 'Outfit', sans-serif; font-size: clamp(.95rem, 1.9vh, 1.12rem); color: var(--gris-texto); margin-top: 3px; }
+
+    /* Lightbox de posters — pantalla completa con zoom */
+    #poster-lightbox {
+      position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,.94);
+      display: none; flex-direction: column; align-items: center; justify-content: center;
+    }
+    #poster-lightbox.activo { display: flex; }
+    .poster-lightbox-scroll {
+      width: 100%; flex: 1 1 auto; overflow: auto; display: flex; align-items: center; justify-content: center; padding: clamp(1rem, 4vh, 2.5rem);
+    }
+    .poster-lightbox-scroll.zoom { align-items: flex-start; justify-content: flex-start; }
+    #poster-lightbox-img {
+      max-width: 90vw; max-height: 80vh; object-fit: contain; cursor: zoom-in;
+      box-shadow: var(--sombra-md); border: 1px solid var(--acero);
+    }
+    #poster-lightbox-img.zoomed { max-width: none; max-height: none; width: 1200px; cursor: zoom-out; }
+    .poster-lightbox-close, .poster-lightbox-nav {
+      position: absolute; z-index: 2; border: 1px solid var(--verde); background: var(--carbon); color: var(--verde);
+      cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: var(--verde-glow);
+    }
+    .poster-lightbox-close { top: clamp(1rem, 3vh, 1.6rem); right: clamp(1rem, 3vw, 1.6rem); width: 42px; height: 42px; font-size: 1.2rem; }
+    .poster-lightbox-nav { top: 50%; transform: translateY(-50%); width: 42px; height: 42px; font-size: 1.1rem; }
+    #poster-prev { left: clamp(.6rem, 2vw, 1.6rem); }
+    #poster-next { right: clamp(.6rem, 2vw, 1.6rem); }
+    .poster-lightbox-hint {
+      font-family: 'Outfit', sans-serif; font-size: clamp(.85rem, 1.7vh, 1rem); color: var(--gris-texto);
+      letter-spacing: .05em; text-align: center; padding: 0 1rem clamp(.8rem, 2vh, 1.3rem);
+    }
 
     /* QR codes */
     .qr-panel { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: clamp(1.4rem, 3.6vw, 2.8rem) clamp(1rem, 3vh, 2rem); flex: 1 1 0; min-height: 0; }
     .qr-card { display: flex; flex-direction: column; align-items: center; gap: clamp(.6rem, 1.5vh, 1rem); }
-    .qr-card .marco { height: clamp(130px, 32vh, 380px); aspect-ratio: 1; background: var(--blanco); border-radius: var(--radio-md); padding: clamp(.8rem, 2vh, 1.3rem); display: flex; align-items: center; justify-content: center; box-shadow: var(--sombra-md); border: 3px solid var(--verde); }
+    .qr-card .marco { height: clamp(140px, 24vh, 310px); aspect-ratio: 1; background: var(--blanco); border-radius: var(--radio-md); padding: clamp(.8rem, 2vh, 1.3rem); display: flex; align-items: center; justify-content: center; box-shadow: var(--sombra-md); border: 3px solid var(--verde); }
     .qr-card .marco img { width: 100%; height: 100%; object-fit: contain; }
     .qr-card span { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(1.15rem, 2.4vh, 1.45rem); letter-spacing: .04em; text-transform: uppercase; color: var(--blanco); text-align: center; }
 
@@ -277,8 +305,8 @@
     .tarifa-card h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(1.4rem, 2.9vh, 1.8rem); color: var(--verde); letter-spacing: .02em; line-height: 1.05; }
     .tarifa-lista { list-style: none; display: grid; gap: clamp(.4rem, 1vh, .65rem); flex: 1 1 auto; }
     .tarifa-lista li { border-top: 1px solid var(--acero); padding-top: clamp(.4rem, 1vh, .65rem); }
-    .tarifa-lista .nombre { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(1rem, 2vh, 1.18rem); color: var(--blanco); display: block; }
-    .tarifa-lista .rango { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(1.05rem, 2.1vh, 1.24rem); color: var(--verde); display: block; margin-top: 2px; }
+    .tarifa-lista .nombre { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(1.1rem, 2.2vh, 1.32rem); color: var(--blanco); display: block; }
+    .tarifa-lista .rango { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(1.18rem, 2.3vh, 1.4rem); color: var(--verde); display: block; margin-top: 2px; }
 
     /* Cierre */
     .final { text-align: center; align-items: center; }
@@ -348,15 +376,11 @@
       .lista-check { gap: .32rem; }
       .lista-check li { padding: .4rem .7rem; font-size: clamp(.82rem, 1.95vh, .98rem); gap: 8px; line-height: 1.2; }
       .tech-chips span { font-size: clamp(.85rem, 2vh, 1.02rem); padding: .45rem .9rem; }
-      .servicio-bloque { padding: .6rem .85rem; gap: 12px; margin-bottom: .5rem; }
-      .servicio-bloque .icono { font-size: clamp(1.15rem, 2.6vh, 1.5rem); width: clamp(36px, 6vh, 48px); height: clamp(36px, 6vh, 48px); }
-      .servicio-bloque h3 { font-size: clamp(1.05rem, 2.4vh, 1.25rem); margin-bottom: 2px; }
-      .servicio-bloque p { font-size: clamp(.82rem, 1.9vh, .98rem); line-height: 1.32; }
 
-      .paleta-grid { grid-template-columns: repeat(3, 1fr); }
-      .paleta-chip .swatch { height: 62px; }
-      .paleta-chip .nombre { font-size: .95rem; }
-      .paleta-chip .hex { font-size: .78rem; }
+      .paleta-grid { gap: .7rem; }
+      .paleta-chip .swatch { width: 78px; height: 78px; border-width: 6px; }
+      .paleta-chip .nombre { font-size: 1.05rem; }
+      .paleta-chip .hex { font-size: .85rem; }
       .fuentes-row { gap: .6rem; }
       .fuente-card { padding: .55rem .9rem; }
       .fuente-card .muestra { font-size: 1.35rem; }
@@ -376,11 +400,11 @@
       .poster-card { height: auto; aspect-ratio: 3 / 4; }
       .poster-card img { flex: 1 1 auto; min-height: 0; background: var(--negro-suave); }
       .poster-card .cap { flex-shrink: 0; }
-      .poster-card .cap .t { font-size: .82rem; }
-      .poster-card .cap .s { font-size: .66rem; }
+      .poster-card .cap .t { font-size: .92rem; }
+      .poster-card .cap .s { font-size: .74rem; }
 
       .qr-panel { gap: .8rem; }
-      .qr-card .marco { height: clamp(90px, 17vh, 150px); }
+      .qr-card .marco { height: clamp(110px, 20vh, 190px); }
       .qr-card span { font-size: .95rem; }
 
       .tarifas-grid { gap: .5rem; }
@@ -411,8 +435,8 @@
       .miembro-nombre { font-size: clamp(1.35rem, 3vh, 1.65rem); }
       .miembro-rol { font-size: clamp(.82rem, 1.8vh, .95rem); }
       .miembro-desc { display: none; }
-      .paleta-grid { gap: .4rem; }
-      .paleta-chip .swatch { height: 42px; }
+      .paleta-grid { gap: .5rem; }
+      .paleta-chip .swatch { width: 52px; height: 52px; border-width: 4px; }
       .paleta-chip .info { padding: .28rem .3rem; }
       .paleta-chip .nombre { font-size: .88rem; }
       .paleta-chip .hex { font-size: .76rem; margin-top: 1px; }
@@ -432,8 +456,8 @@
       .costos-total { padding: .4rem .7rem; }
       .costos-total .monto { font-size: 1.2rem; }
       .posters-grid { gap: .5rem; }
-      .poster-card { height: clamp(90px, 22vh, 160px); }
-      .qr-card .marco { height: clamp(80px, 20vh, 140px); }
+      .poster-card { height: clamp(100px, 24vh, 180px); }
+      .qr-card .marco { height: clamp(95px, 20vh, 160px); }
     }
   </style>
 </head>
@@ -568,10 +592,15 @@
       <div class="slide-inner">
         <p class="seccion-num">05 — Por qué vale la pena</p>
         <h2>Justificación</h2>
-        <div class="tarjeta">
-          <p>
-            La propuesta responde a la necesidad de motivar a la comunidad a ejercitarse y cuidar su salud mediante una estrategia de visibilización del gimnasio, que aumente su flujo de clientes e impacte los hábitos saludables del mayor número de personas posible.
-          </p>
+        <div class="dos-col">
+          <div class="col-texto">
+            <div class="tarjeta">
+              <p>
+                La propuesta responde a la necesidad de motivar a la comunidad a ejercitarse y cuidar su salud mediante una estrategia de visibilización del gimnasio, que aumente su flujo de clientes e impacte los hábitos saludables del mayor número de personas posible.
+              </p>
+            </div>
+          </div>
+          <img src="../posters/poster-entrenadores.jpg" alt="Entrenando en Fénix Gym" />
         </div>
       </div>
     </section>
@@ -585,12 +614,15 @@
           <div class="col-texto">
             <p class="lead">Redes sociales y plataformas digitales para promoción, motivación y comunidad, con herramientas de diseño y análisis de datos para medir el impacto de cada publicación.</p>
             <div class="tech-chips">
-              <span>📸 Instagram</span>
-              <span>📘 Facebook</span>
               <span>🎵 TikTok</span>
               <span>🎨 Canva</span>
-              <span>🖌️ Photoshop</span>
-              <span>📊 Google Analytics</span>
+              <span>🖌️ Adobe Photoshop</span>
+              <span>🎞️ Adobe Premiere</span>
+              <span>✨ Adobe After Effects</span>
+              <span>🎥 Vidu AI</span>
+              <span>🤖 Claude</span>
+              <span>🐙 GitHub</span>
+              <span>💠 Gemini</span>
             </div>
           </div>
           <img src="../galeria/bts-fotografia-3.jpg" alt="Detrás del lente durante la grabación de contenido" />
@@ -663,29 +695,10 @@
       </div>
     </section>
 
-    <!-- ═══ 12. ETIQUETA Y EMPAQUE ═══ -->
+    <!-- ═══ 12. SEGMENTO OBJETIVO ═══ -->
     <section class="slide" data-bg="12">
       <div class="slide-inner">
-        <p class="seccion-num">11 — Presentación del producto</p>
-        <h2>Etiqueta y <span>Empaque</span></h2>
-        <p class="lead" style="margin-bottom:.3rem;">Nuestro "empaque" es 100% digital: un Kit de Bienvenida que el usuario descarga y recibe al unirse a la comunidad GYM VIBES.</p>
-        <div class="dos-tarjetas">
-          <div class="servicio-bloque" style="margin-bottom:0;">
-            <span class="icono">📥</span>
-            <div><h3>E-books en PDF</h3><p>Rutinas de entrenamiento y planes de alimentación descargables, listos para seguir desde el celular.</p></div>
-          </div>
-          <div class="servicio-bloque" style="margin-bottom:0;">
-            <span class="icono">🗂️</span>
-            <div><h3>Kit de Bienvenida</h3><p>Carpetas ZIP personalizadas que agrupan todo el material en un solo paquete al unirse a la comunidad.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ 13. SEGMENTO OBJETIVO ═══ -->
-    <section class="slide" data-bg="13">
-      <div class="slide-inner">
-        <p class="seccion-num">12 — A quién llegamos</p>
+        <p class="seccion-num">11 — A quién llegamos</p>
         <h2>Segmento <span>Objetivo</span></h2>
         <div class="segmento-grid">
           <div class="segmento-card">
@@ -703,35 +716,45 @@
     </section>
 
     <!-- ═══ 14. VENTAJAS COMPETITIVAS ═══ -->
-    <section class="slide" data-bg="14">
+    <section class="slide" data-bg="13">
       <div class="slide-inner">
-        <p class="seccion-num">13 — Lo que nos distingue</p>
+        <p class="seccion-num">12 — Lo que nos distingue</p>
         <h2>Ventajas <span>Competitivas</span></h2>
-        <div class="tarjeta">
-          <p>
-            Interfaz oscura (dark mode) moderna, catálogo visual de ejercicios clasificado por grupo muscular y acceso rápido a cada rutina — pensado para verse tan bien como se siente entrenar.
-          </p>
+        <div class="dos-col invertido">
+          <img src="../galeria/bts-fotografia-4.jpg" alt="Equipo de GYM VIBES grabando contenido juntos" />
+          <div class="col-texto">
+            <div class="tarjeta">
+              <p>
+                Promovemos la vida fitness a través de videos y animaciones cargados de humor e información útil, mostrando que el ejercicio y la buena nutrición pueden ser un pasatiempo lleno de amistad, camaradería y buenos momentos.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ═══ 15. ESTUDIO DEL SECTOR ═══ -->
-    <section class="slide" data-bg="15">
+    <section class="slide" data-bg="14">
       <div class="slide-inner">
-        <p class="seccion-num">14 — A quién servimos</p>
+        <p class="seccion-num">13 — A quién servimos</p>
         <h2>Estudio del <span>sector</span></h2>
-        <div class="tarjeta">
-          <p>
-            El gimnasio Fénix Gym está ubicado en el barrio La Pastora, en el sector norte de Cúcuta, antes de llegar al barrio Belén.
-          </p>
+        <div class="dos-col">
+          <div class="col-texto">
+            <div class="tarjeta">
+              <p>
+                El gimnasio Fénix Gym está ubicado en el barrio La Pastora, en el sector norte de Cúcuta, antes de llegar al barrio Belén.
+              </p>
+            </div>
+          </div>
+          <img src="../posters/poster-fenix-equipo.jpg" alt="Equipo de Fénix Gym frente a las instalaciones" />
         </div>
       </div>
     </section>
 
     <!-- ═══ 16. PALETA DE COLORES ═══ -->
-    <section class="slide" data-bg="16">
+    <section class="slide" data-bg="15">
       <div class="slide-inner">
-        <p class="seccion-num">15 — Nuestra identidad visual</p>
+        <p class="seccion-num">14 — Nuestra identidad visual</p>
         <h2>Paleta de <span>colores</span></h2>
         <div class="paleta-grid">
           <div class="paleta-chip"><div class="swatch" style="background:#050505;"></div><div class="info"><div class="nombre">Negro</div><div class="hex">#050505</div></div></div>
@@ -749,9 +772,9 @@
     </section>
 
     <!-- ═══ 17. PRIMER CLIENTE EN EL SECTOR: GYM FÉNIX ═══ -->
-    <section class="slide" data-bg="17">
+    <section class="slide" data-bg="16">
       <div class="slide-inner">
-        <p class="seccion-num">16 — Nuestro primer aliado</p>
+        <p class="seccion-num">15 — Nuestro primer aliado</p>
         <h2>Primer cliente en el sector: <span>Gym Fénix</span></h2>
         <div class="dos-col">
           <p class="lead">
@@ -763,24 +786,24 @@
     </section>
 
     <!-- ═══ 18. POSTER PROMOCIONALES ═══ -->
-    <section class="slide" data-bg="18">
+    <section class="slide" data-bg="17">
       <div class="slide-inner">
-        <p class="seccion-num">17 — Material publicitario</p>
+        <p class="seccion-num">16 — Material publicitario</p>
         <h2>Poster <span>promocionales</span></h2>
         <div class="posters-grid">
-          <div class="poster-card">
+          <div class="poster-card" onclick="abrirPoster(0)">
             <img src="../posters/poster-fenix-equipo.jpg" alt="Fénix Gym — Tu lugar de entrenamiento" />
             <div class="cap"><div class="t">Tu lugar de entrenamiento</div><div class="s">Equipo Gym Vibes</div></div>
           </div>
-          <div class="poster-card">
+          <div class="poster-card" onclick="abrirPoster(1)">
             <img src="../posters/poster-entrenadores.jpg" alt="Entrena con nosotros" />
             <div class="cap"><div class="t">Entrena con nosotros</div><div class="s">Equipos y ambiente de primera</div></div>
           </div>
-          <div class="poster-card">
+          <div class="poster-card" onclick="abrirPoster(2)">
             <img src="../posters/poster-fuego-interior.jpg" alt="Saca tu fuego interior" />
             <div class="cap"><div class="t">¡Saca tu fuego interior!</div><div class="s">Entrena en Fénix Gym</div></div>
           </div>
-          <div class="poster-card">
+          <div class="poster-card" onclick="abrirPoster(3)">
             <img src="../posters/poster-unete.jpg" alt="Únete a Fénix Gym" />
             <div class="cap"><div class="t">¡Únete a Fénix Gym!</div><div class="s">Tu renacimiento fitness</div></div>
           </div>
@@ -789,9 +812,9 @@
     </section>
 
     <!-- ═══ 19. INFORME DE COSTOS ═══ -->
-    <section class="slide" data-bg="19">
+    <section class="slide" data-bg="18">
       <div class="slide-inner">
-        <p class="seccion-num">18 — Presupuesto del proyecto</p>
+        <p class="seccion-num">17 — Presupuesto del proyecto</p>
         <h2>Informe de <span>costos</span></h2>
         <div class="costos-grid">
           <div class="costo-item"><span class="desc">Cámara Sony ZV-E10</span><span class="valor">$3.375.962</span></div>
@@ -817,9 +840,9 @@
     </section>
 
     <!-- ═══ 20. INFORME DE GANANCIAS/PÉRDIDAS ═══ -->
-    <section class="slide" data-bg="20">
+    <section class="slide" data-bg="19">
       <div class="slide-inner">
-        <p class="seccion-num">19 — Balance del proyecto</p>
+        <p class="seccion-num">18 — Balance del proyecto</p>
         <h2>Informe de <span>Ganancias / Pérdidas</span></h2>
         <div class="dos-tarjetas">
           <div class="tarjeta">
@@ -835,9 +858,9 @@
     </section>
 
     <!-- ═══ 21. PROYECCIÓN DE VENTA — PORTAFOLIO DE MARKETING ═══ -->
-    <section class="slide" data-bg="21">
+    <section class="slide" data-bg="20">
       <div class="slide-inner">
-        <p class="seccion-num">20 — Portafolio de marketing</p>
+        <p class="seccion-num">19 — Portafolio de marketing</p>
         <h2>Proyección de <span>venta</span></h2>
         <p class="lead" style="margin-bottom:.2rem;">Estudio de mercado de tarifas de servicios digitales (COP), como base para cotizar futuros clientes:</p>
         <div class="tarifas-grid">
@@ -873,7 +896,7 @@
     </section>
 
     <!-- ═══ 22. CIERRE ═══ -->
-    <section class="slide" data-bg="22">
+    <section class="slide" data-bg="21">
       <div class="slide-inner final">
         <img class="logo-final" src="../img/logo.png" alt="GYM VIBES" />
         <p class="label">Gracias por su atención</p>
@@ -885,12 +908,23 @@
 
   </div>
 
+  <!-- ═══ Lightbox de posters — pantalla completa con zoom ═══ -->
+  <div id="poster-lightbox">
+    <button class="poster-lightbox-close" onclick="cerrarPoster()" aria-label="Cerrar">✕</button>
+    <button class="poster-lightbox-nav" id="poster-prev" onclick="navegarPoster(-1)" aria-label="Poster anterior">‹</button>
+    <button class="poster-lightbox-nav" id="poster-next" onclick="navegarPoster(1)" aria-label="Poster siguiente">›</button>
+    <div class="poster-lightbox-scroll" id="poster-scroll">
+      <img id="poster-lightbox-img" src="" alt="" onclick="toggleZoomPoster()" />
+    </div>
+    <p class="poster-lightbox-hint" id="poster-hint">Poster 1 de 4 — toca la imagen para hacer zoom</p>
+  </div>
+
   <!-- ═══ Controles de navegación ═══ -->
   <div class="nav-controles">
     <button class="nav-btn" id="btnPrev" aria-label="Diapositiva anterior">‹</button>
     <div class="nav-puntos" id="navPuntos"></div>
     <button class="nav-btn" id="btnNext" aria-label="Siguiente diapositiva">›</button>
-    <span class="nav-contador" id="navContador">1 / 22</span>
+    <span class="nav-contador" id="navContador">1 / 21</span>
   </div>
 
   <script>
@@ -939,6 +973,12 @@
     document.getElementById('btnNext').addEventListener('click', () => irA(actual + 1));
 
     document.addEventListener('keydown', (e) => {
+      if (posterLightbox.classList.contains('activo')) {
+        if (e.key === 'Escape') cerrarPoster();
+        if (e.key === 'ArrowRight') navegarPoster(1);
+        if (e.key === 'ArrowLeft') navegarPoster(-1);
+        return;
+      }
       if (e.key === 'ArrowRight' || e.key === ' ') irA(actual + 1);
       if (e.key === 'ArrowLeft') irA(actual - 1);
     });
@@ -953,12 +993,59 @@
     }, { passive: true });
 
     deck.addEventListener('touchend', (e) => {
+      if (posterLightbox.classList.contains('activo')) return;
       const dx = e.changedTouches[0].clientX - touchStartX;
       const dy = e.changedTouches[0].clientY - touchStartY;
       if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) {
         if (dx < 0) irA(actual + 1); else irA(actual - 1);
       }
     }, { passive: true });
+
+    /* ═══ Lightbox de posters — pantalla completa con zoom ═══ */
+    const posters = [
+      '../posters/poster-fenix-equipo.jpg',
+      '../posters/poster-entrenadores.jpg',
+      '../posters/poster-fuego-interior.jpg',
+      '../posters/poster-unete.jpg'
+    ];
+    let posterActual = 0;
+    const posterLightbox = document.getElementById('poster-lightbox');
+    const posterImg = document.getElementById('poster-lightbox-img');
+    const posterScroll = document.getElementById('poster-scroll');
+    const posterHint = document.getElementById('poster-hint');
+
+    function abrirPoster(i) {
+      posterActual = i;
+      mostrarPoster();
+      posterLightbox.classList.add('activo');
+    }
+
+    function mostrarPoster() {
+      posterImg.classList.remove('zoomed');
+      posterScroll.classList.remove('zoom');
+      posterImg.src = posters[posterActual];
+      posterImg.alt = `Poster promocional ${posterActual + 1} de ${posters.length}`;
+      posterHint.textContent = `Poster ${posterActual + 1} de ${posters.length} — toca la imagen para hacer zoom`;
+    }
+
+    function navegarPoster(dir) {
+      posterActual = (posterActual + dir + posters.length) % posters.length;
+      mostrarPoster();
+    }
+
+    function toggleZoomPoster() {
+      const zoom = posterImg.classList.toggle('zoomed');
+      posterScroll.classList.toggle('zoom', zoom);
+      if (zoom) posterScroll.scrollTo(0, 0);
+    }
+
+    function cerrarPoster() {
+      posterLightbox.classList.remove('activo');
+    }
+
+    posterLightbox.addEventListener('click', (e) => {
+      if (e.target === posterLightbox || e.target === posterScroll) cerrarPoster();
+    });
   </script>
 
 </body>
