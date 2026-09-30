@@ -677,7 +677,7 @@
     /* Para YouTube se sigue usando iframe 16:9                  */
     /* Para Instagram y TikTok se muestra imagen + botón link    */
     .video-thumb-wrap {
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 3 / 4;
       position: relative;
       overflow: hidden;
       background: var(--negro);
@@ -686,11 +686,11 @@
       justify-content: center;
     }
 
-    /* Thumbnail (imagen de portada del video) */
+    /* Thumbnail (imagen de portada del video) — TikTok/Instagram son verticales: contain evita recortar la captura */
     .video-thumb-wrap img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       transition: transform 0.4s, filter 0.3s;
       filter: brightness(0.75);
     }
