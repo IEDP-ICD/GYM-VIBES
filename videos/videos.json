@@ -40,5 +40,19 @@
     "categoria": "Reto",
     "url": "https://vt.tiktok.com/ZSqEH6wME/",
     "thumbnail": "tiktok-record-plancha.jpg"
+  },
+  {
+    "tipo": "tiktok",
+    "titulo": "Conviértete en un Super Sayayin",
+    "categoria": "Motivación",
+    "url": "https://vt.tiktok.com/ZSbSB3XLq/",
+    "thumbnail": "tiktok-super-sayayin.jpg"
+  },
+  {
+    "tipo": "tiktok",
+    "titulo": "Entrevista en el Gym Fénix",
+    "categoria": "Entrevista",
+    "url": "https://vt.tiktok.com/ZSbSBbsTp/",
+    "thumbnail": "tiktok-entrevista-gym-fenix.jpg"
   }
 ]
