@@ -1,50 +1,44 @@
 [
   {
     "tipo": "tiktok",
-    "titulo": "Rutina full body para principiantes",
+    "titulo": "Presentación del parche",
+    "categoria": "Equipo",
+    "url": "https://vt.tiktok.com/ZSqEH2J4K/",
+    "thumbnail": "tiktok-presentacion-parche.jpg"
+  },
+  {
+    "tipo": "tiktok",
+    "titulo": "Entrenamiento maluco",
     "categoria": "Entrenamiento",
-    "descripcion": "Rutina completa de 30 minutos para empezar en el gym sin experiencia previa.",
-    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
-    "thumbnail": "thumb-rutina-fullbody.jpg"
+    "url": "https://vt.tiktok.com/ZSqEu37Yn/",
+    "thumbnail": "tiktok-entrenamiento-maluco.jpg"
   },
   {
     "tipo": "tiktok",
-    "titulo": "Qué comer antes y después del gym",
-    "categoria": "Nutrición",
-    "descripcion": "Los mejores alimentos para maximizar tu rendimiento y recuperación muscular.",
-    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
-    "thumbnail": "thumb-nutricion-gym.jpg"
+    "titulo": "100k en banca falso",
+    "categoria": "Reto",
+    "url": "https://vt.tiktok.com/ZSqEHhW13/",
+    "thumbnail": "tiktok-100k-banca-falso.jpg"
   },
   {
     "tipo": "tiktok",
-    "titulo": "5 errores que te impiden progresar",
-    "categoria": "Consejos",
-    "descripcion": "Los errores más comunes en el gym y cómo corregirlos para ver resultados más rápido.",
-    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
-    "thumbnail": "thumb-errores-gym.jpg"
+    "titulo": "Spotify me traiciona",
+    "categoria": "Anécdota",
+    "url": "https://vt.tiktok.com/ZSqEHRjTX/",
+    "thumbnail": "tiktok-spotify-traiciona.jpg"
   },
   {
     "tipo": "tiktok",
-    "titulo": "Motivación para no faltar al gym",
-    "categoria": "Motivación",
-    "descripcion": "Cuando no tienes ganas pero igual vas. El secreto de la constancia.",
-    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
-    "thumbnail": "thumb-motivacion.jpg"
+    "titulo": "Retamos al Profe",
+    "categoria": "Reto",
+    "url": "https://vt.tiktok.com/ZSqEHkN88/",
+    "thumbnail": "tiktok-retamos-profe.jpg"
   },
   {
     "tipo": "tiktok",
-    "titulo": "Rutina de piernas en 60 segundos",
-    "categoria": "Entrenamiento",
-    "descripcion": "Los ejercicios más efectivos para piernas resumidos en un minuto.",
-    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
-    "thumbnail": "thumb-rutina-piernas.jpg"
-  },
-  {
-    "tipo": "tiktok",
-    "titulo": "Cómo leer las etiquetas nutricionales",
-    "categoria": "Nutrición",
-    "descripcion": "Aprende a interpretar los valores nutricionales para tomar mejores decisiones al comer.",
-    "url": "https://www.tiktok.com/@USUARIO/video/PEGA_EL_CODIGO_DEL_VIDEO",
-    "thumbnail": "thumb-etiquetas-nutricionales.jpg"
+    "titulo": "Record de plancha",
+    "categoria": "Reto",
+    "url": "https://vt.tiktok.com/ZSqEH6wME/",
+    "thumbnail": "tiktok-record-plancha.jpg"
   }
 ]
